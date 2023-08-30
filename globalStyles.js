@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 export default styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#2F4858",
+    backgroundColor: "#22181C",
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -48,7 +48,7 @@ export default styles = StyleSheet.create({
     borderRadius: 9,
   },
   botao:{
-    backgroundColor:'#33658A',
+    backgroundColor:'#FFD166',
     width: 125,
     borderRadius: 20,
     marginTop: 20,

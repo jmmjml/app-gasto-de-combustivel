@@ -16,8 +16,8 @@ export default function App() {
   const [resultado, setResultado] = useState('');
 
   const executar = () =>{
-    let dim = (valorLitro * quantidade);
-    let ks = ( dim / km);
+    let dim = (pareseInt(valorLitro) * parseInt(quantidade));
+    let ks = ( dim / parseInt(km));
     setResultado = ks
   }
 
@@ -45,7 +45,7 @@ export default function App() {
           </View>
         </View>
         <View style={{flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
-          <Pressable style={styles.botao} ><Text style={{color:"#fff"}}>Buscar valor</Text></Pressable>
+          <Pressable style={styles.botao} ><Text style={{color:"#000"}}>Buscar valor</Text></Pressable>
         </View>
         <View>
           <Text>{`Resultado: ${resultado}`}</Text>
