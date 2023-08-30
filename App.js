@@ -16,6 +16,9 @@ export default function App() {
   const [resultado, setResultado] = useState('');
 
   const executar = () =>{
+    let dim = (valorLitro * quantidade);
+    let ks = ( dim / km);
+    setResultado = ks
   }
 
 
