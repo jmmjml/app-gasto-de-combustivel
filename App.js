@@ -21,7 +21,13 @@ export default function App() {
     let quilo = parseInt(km)
     let dim = (valor * quantidad);
     let ks = ( dim / quilo);
-    setResultado(ks.toFixed(2));
+    setResultado("R$"+ks.toFixed(2)+"/km");
+  }
+  const limpar = (valorLitro,quantidade,km) =>{
+    setKm("");
+    setQuantidade("");
+    setValorLitro("");
+    setResultado("")
   }
 
 
@@ -29,6 +35,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
+        <View style={{width:"90%"}}>
+          <Text style={styles.title}>Autonomia do Gasto de Combustível</Text>
+        </View>
         <View>
           <Text style={styles.texto}>Valor do litro</Text>
           <View style={styles.viewInput}>
@@ -48,10 +57,11 @@ export default function App() {
           </View>
         </View>
         <View style={{flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
-          <Pressable style={styles.botao}  onPress={() => executar(valorLitro,quantidade,km)}><Text style={styles.texto}>Buscar valor</Text></Pressable>
+          <Pressable style={styles.botao}  onPress={() => executar(valorLitro,quantidade,km)}><Text style={styles.texto}>Calcular valor</Text></Pressable>
+          <Pressable style={styles.botao}  onPress={() => limpar(valorLitro,quantidade,km)}><Text style={styles.texto}>Limpar valor</Text></Pressable>
         </View>
-        <View>
-          <Text style={styles.texto}>{`Resultado: ${resultado}`}</Text>
+        <View style={styles.viewInput2}>
+          <Text style={styles.texto3}>{`Resultado: ${resultado}`}</Text>
         </View>
       <StatusBar style="auto" />
       </View>

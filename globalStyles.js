@@ -36,6 +36,12 @@ export default styles = StyleSheet.create({
     width: '100%',
     textAlign:'center',
   },
+  texto3: {
+    justifyContent: 'center',
+    color: '#fff',
+    textAlign: 'center',
+    paddingLeft: 10
+  },
   imagem: {
     width: '25%',
     height: '19%',
@@ -73,5 +79,17 @@ export default styles = StyleSheet.create({
     borderColor:"#fff",
     borderStyle:"solid",
     borderRadius:9,
-  }
+  },
+  viewInput2: {
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    width: 180,
+    borderColor: '#fff',
+    borderStyle:"solid",
+    borderWidth: 2,
+    borderRadius: 9,
+    marginTop:12,
+  },
 });
